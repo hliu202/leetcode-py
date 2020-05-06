@@ -11,7 +11,7 @@ costs = [2,7,15]
     # 初始化dp数组
     # 明确动态转移方程
 
-dp = [0 for _ in range(days[-1] + 1)]
+dp = [0] * (days[-1] + 1)
 
 cur_idx = 0;
 for i in range(1, len(dp)):
