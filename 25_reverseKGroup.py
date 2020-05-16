@@ -8,8 +8,7 @@
 # !! 如果节点总数不是 k 的整数倍，那么请将最后剩余的节点保持原有顺序。
 
 import collections
-from util import list_node
-# from util.list_node import ListNode
+from util.list_node import *
 
 class Solution(object):
     def reverseKGroup(self, head, k):
@@ -51,12 +50,12 @@ class Solution(object):
         
         return head
 
-# list_node.printLinkedList( 
+# printLinkedList( 
 #     Solution().reverseKGroup(
-#         list_node.createLinkedList([1,2,3,4,5]), 
+#         createLinkedList([1,2,3,4,5]), 
 #         2))
 
-list_node.printLinkedList( 
+printLinkedList( 
     Solution().reverseKGroup(
-        list_node.createLinkedList([1,2,3,4,5]), 
+        createLinkedList([1,2,3,4,5]), 
         3))

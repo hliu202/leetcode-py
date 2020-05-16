@@ -1,8 +1,7 @@
 
 # https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/
 
-from util import tree_node
-from util.tree_node import TreeNode
+from util.tree_node import *
 
 res = None
 xp = None
@@ -36,6 +35,6 @@ class Solution:
         return res
 
 
-root = tree_node.createTree([3,5,1,6,2,0,8,None,None,7,4])
+root = createTree([3,5,1,6,2,0,8,None,None,7,4])
 res = Solution().lowestCommonAncestor(root, root.left, root.left.right.right)
 print(res.val)
