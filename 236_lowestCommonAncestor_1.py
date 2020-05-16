@@ -1,6 +1,6 @@
 
-from util import tree
-from util.tree import TreeNode
+from util import tree_node
+from util.tree_node import TreeNode
 
 # https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/236-er-cha-shu-de-zui-jin-gong-gong-zu-xian-hou-xu/
 
@@ -21,6 +21,6 @@ class Solution:
         if rl: return rl #4
         return rr
 
-root = tree.createTree([3,5,1,6,2,0,8,None,None,7,4])
+root = tree_node.createTree([3,5,1,6,2,0,8,None,None,7,4])
 res = Solution().lowestCommonAncestor(root, root.left, root.left.right.right)
 print(res.val)
