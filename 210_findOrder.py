@@ -39,7 +39,7 @@ class Solution(object):
             if valid and not visited[i]:
                 dfs(i)
                 if not valid:
-                    return None
+                    return [] # None or Empty?
         
         return stack[::-1]
 
