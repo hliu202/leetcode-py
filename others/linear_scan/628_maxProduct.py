@@ -1,5 +1,7 @@
 # https://leetcode-cn.com/problems/maximum-product-of-three-numbers/
 
+# 线性扫描
+
 from typing import List
 import sys
 

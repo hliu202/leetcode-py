@@ -5,11 +5,13 @@
 #         self.left = None
 #         self.right = None
 
+# Like BFS search order
+
 from util import tree
 from collections import deque
 
 class Solution(object):
-    def levelOrder(self, root): # like BFS
+    def levelOrder(self, root):
         """
         :type root: TreeNode
         :rtype: List[List[int]]
