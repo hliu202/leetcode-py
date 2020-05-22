@@ -1,5 +1,7 @@
 
 # Definition for a binary tree node.
+from collections import deque
+
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -19,3 +21,35 @@ def createNode(A, idxOfLevel, depth):
 
 def createTree(A):
     return createNode(A, 0, 0)
+
+def levelOrder(root):
+    """
+    :type root: TreeNode
+    :rtype: List[List[int]]
+    """
+    if root is None:
+        return []
+
+    deq = deque()
+    deq.append(root)
+    results = []
+    while deq:
+        count = len(deq)
+        cur_level = []
+        results.append(cur_level)
+        while count != 0:
+            cur = deq.popleft()
+            count -= 1
+            cur_level.append(cur.val)
+
+            if cur.left:
+                deq.append(cur.left)
+            if cur.right:
+                deq.append(cur.right)
+
+    return results
+
+def printTree(root :TreeNode):
+    res = levelOrder(root)
+    for L in res:
+        print (L)
