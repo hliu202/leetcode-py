@@ -22,7 +22,7 @@ class Solution(object):
         def dfs(node):
             nonlocal valid
             visited[node] = 1
-            
+
             for t in edges[node]:
                 if visited[t] == 0:
                     dfs(t)
