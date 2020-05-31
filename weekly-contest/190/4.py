@@ -2,6 +2,15 @@
 
 # 动态规划
 
+# 第一种想法： dp[i][j]的含义是以nums1[i]和nums2[j]结尾的子序列的最大点积。 X
+# 第二种想法：dp[i][j]的含义是到nums1[i]和nums2[j]为止的子序列的最大点积。 
+
+# 1. dp[i][j] 为前 i 和前 j 个最大点集
+#    dp[0][0] 为 A[0] * B[0]
+# 2. dp[i+1][j+1] = max(dp[i+1][j], dp[i][j+1], dp[i][j]+A[i+1]*B[j+1])
+
+
+
 class Solution(object):
     def maxDotProduct(self, nums1, nums2):
         """
@@ -13,7 +22,7 @@ class Solution(object):
         if max(a)<0<min(b): return max(a)*min(b)
         if max(b)<0<min(a): return max(b)*min(a)
         n, m = len(a), len(b)
-        f = [[0]*(m+1) for _ in range(n+1)]
+        f = [[0]*(m+1) for _ in range(n+1)] # 哨兵, f[1][1]为开始
         for i in range(n):
             for j in range(m):
                 f[i+1][j+1] = max(f[i][j+1], f[i+1][j], f[i][j]+a[i]*b[j])

@@ -1,4 +1,10 @@
 
+# https://leetcode-cn.com/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/solution/c-xiang-liang-suan-yuan-xin-jian-dan-yi-dong-by-sm/
+# 圆心
+
+# 此题难点在于如何通过两个点和一个半径确定圆心
+# 垂直的充要条件是两个向量的点积为 0, 即(x1-x2)*(cx-px)+(y1-y2)*(cy-py)=0
+
 import math
 from typing import List
 
