@@ -13,6 +13,7 @@ class Solution:
         LEN = L1 + L2
 
         even = False
+        # limit 即 median 的顺序 idx
         if LEN & 1 == 0:
             even = True
             limit = ((L1 + L2) >> 1) - 1
@@ -41,9 +42,9 @@ class Solution:
                 j += 1
 
         if i == L1: #
-            return get_median_from_1(nums2, limit - (i - 1))
+            return get_median_from_1(nums2, limit - i)
         if j == L2:
-            return get_median_from_1(nums1, limit - (j - 1))
+            return get_median_from_1(nums1, limit - j)
 
         if not even:
             return min(nums1[i], nums2[j])
@@ -51,17 +52,20 @@ class Solution:
         if nums1[i] < nums2[j]:
             N1 = nums1[i]
             if i + 1 < L1:
-                N2= max(nums1[i+1], nums2[j])
+                N2= min(nums1[i+1], nums2[j])
             else:
                 N2= nums2[j]
         else:
-            N1 = nums1[j]
+            N1 = nums2[j]
             if j+1 < L2:
-                N2 = max(nums1[i], nums2[j+1])
+                N2 = min(nums1[i], nums2[j+1])
             else:
-                N2 = nums1[id]
+                N2 = nums1[i]
         return (N1+N2) / 2
 
-print(Solution().findMedianSortedArrays([1,3], [2]))
-print(Solution().findMedianSortedArrays([1,2], [3,4]))
-print(Solution().findMedianSortedArrays([0,0], [0,0]))
+# print(Solution().findMedianSortedArrays([1,3], [2]))
+# print(Solution().findMedianSortedArrays([1,2], [3,4]))
+# print(Solution().findMedianSortedArrays([0,0], [0,0]))
+# print(Solution().findMedianSortedArrays([1,2], [-1,3]))
+# print(Solution().findMedianSortedArrays([1,2], [1,1]))
+print(Solution().findMedianSortedArrays([1], [2,3]))
