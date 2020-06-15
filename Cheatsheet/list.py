@@ -1,5 +1,5 @@
 
-a = [1,2,3,4,5]
+a = [3,2,1,4,5]
 
 # 倒转列表
 print (a[::-1])
@@ -7,3 +7,6 @@ print (a[::-1])
 for i in range(len(a)-1,-1,-1):
     print (i)
 
+# 排序
+a.sort(reverse=True)
+print (a)
