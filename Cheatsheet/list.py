@@ -10,3 +10,9 @@ for i in range(len(a)-1,-1,-1):
 # 排序
 a.sort(reverse=True)
 print (a)
+
+# join & split
+b = ['hello', 'world', '!']
+bb = '[' + ','.join(b) + ']'
+print(bb)
+print(bb[1:-1].split(','))

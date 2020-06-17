@@ -7,8 +7,8 @@
 
 # Like BFS search order
 
-from util import tree
-from collections import deque
+from util.tree_node import *
+
 
 class Solution(object):
     def levelOrder(self, root):
@@ -18,7 +18,7 @@ class Solution(object):
         """
         if root is None:
             return []
-        
+
         deq = deque()
         deq.append(root)
         results = []
@@ -35,7 +35,9 @@ class Solution(object):
                     deq.append(cur.left)
                 if cur.right:
                     deq.append(cur.right)
-            
+
         return results
 
-[3,9,20,None,None,15,7],
+
+print(Solution().levelOrder(createTree([3, 9, 20, None, None, 15, 7])))
+
