@@ -22,14 +22,17 @@ class Codec:
         deq = deque()
         deq.append(root)
 
-        res = ""
+        res = "["
         while deq:  # BFS
             cur = deq.popleft()
             res += (str(cur.val) if cur is not None else "null") + ","
             if cur is not None:
                 deq.append(cur.left)
                 deq.append(cur.right)
-        return res[0:-1]
+        j = len(res) - 2  # ,
+        while j > 0 and not res[j].isdigit():
+            j -= 1
+        return res[0 : j + 1] + "]"
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
@@ -37,15 +40,15 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-        vals = data.split(",")
+        vals = data[1:-1].split(",")
         if not len(vals):
             return None
 
         deq = deque()
         root = TreeNode(vals[0])
         deq.append(root)
-        i = 1
-        while deq:
+        i, n = 1, len(vals)
+        while deq and i < n:
             cur = deq.popleft()
             if vals[i] != "null":
                 left = TreeNode(vals[i])
@@ -66,6 +69,8 @@ class Codec:
 # codec = Codec()
 # codec.deserialize(codec.serialize(root))
 codec = Codec()
-printTree(codec.deserialize(codec.serialize(createTree([1, 2, 3, None, None, 4, 5]))))
+# printTree(codec.deserialize(codec.serialize(createTree([1, 2, 3, None, None, 4, 5]))))
 # printTree(codec.deserialize(codec.serialize(None)))
 # print(codec.serialize(codec.deserialize("1,2,3,null,null,4,5,null,null,null,null")))
+print(codec.serialize(codec.deserialize("[5,4,8,11,null,13,4,7,2,null,null,null,1]")))
+print(codec.serialize(codec.deserialize("[]")))

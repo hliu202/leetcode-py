@@ -1,15 +1,16 @@
 from util.common_imports import *
 import collections
 
-class Codec:
 
+class Codec:
     def serialize(self, root):
         """Encodes a tree to a single string.
         
         :type root: TreeNode
         :rtype: str
         """
-        if not root: return "[]"
+        if not root:
+            return "[]"
         queue = collections.deque()
         queue.append(root)
         res = []
@@ -19,9 +20,9 @@ class Codec:
                 res.append(str(node.val))
                 queue.append(node.left)
                 queue.append(node.right)
-            else: res.append("null")
-        return '[' + ','.join(res) + ']'
-
+            else:
+                res.append("null")
+        return "[" + ",".join(res) + "]"
 
     def deserialize(self, data):
         """Decodes your encoded data to tree.
@@ -29,9 +30,9 @@ class Codec:
         :type data: str
         :rtype: TreeNode
         """
-        if data=='[]':
+        if data == "[]":
             return None
-        vals, i = data[1:-1].split(','), 1
+        vals, i = data[1:-1].split(","), 1
         root = TreeNode(int(vals[0]))
         queue = collections.deque()
         queue.append(root)
@@ -47,8 +48,17 @@ class Codec:
             i += 1
         return root
 
+
 codec = Codec()
-printTree(codec.deserialize(codec.serialize(createTree([1, 2, 3, None, None, 4, 5]))))
+# printTree(codec.deserialize(codec.serialize(createTree([1, 2, 3, None, None, 4, 5]))))
+print(codec.serialize(createTree("[5,4,8,11,null,13,4,7,2,null,null,null,1]")))
+print(
+    codec.serialize(
+        codec.deserialize(
+            "[5,4,8,11,null,13,4,7,2,null,null,null,1,null,null,null,null,null,null]"
+        )
+    )
+)
 
 # 作者：tinylife
 # 链接：https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/solution/ceng-xu-bian-li-by-tinylife/
