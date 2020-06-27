@@ -8,14 +8,16 @@ class Solution:
         for i in range(n):
             if nums[i] <= 0 or nums[i] > n:
                 nums[i] = n + 1
+
         for i in range(n):
-            if abs(nums[i]) <= n:
-                abs_idx = abs(nums[i]) - 1
-                if nums[abs_idx] > 0:
-                    nums[abs_idx] = -nums[abs_idx]
+            num = abs(nums[i])
+            if num <= n:
+                nums[num - 1] = -abs(nums[num - 1])
+
         for i in range(n):
             if nums[i] > 0:
                 return i + 1
+
         return n + 1
 
 
