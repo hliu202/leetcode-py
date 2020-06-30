@@ -56,7 +56,7 @@
 | 2          | [liouzhou_101](https://leetcode-cn.com/u/liouzhou_101/)      | 21   | 0:31:51  | 0:00:39                                                      | 0:06:17                                                      | 0:13:35                                                      | 0:31:51                                                      |
 | 3          | [JOHNKRAM](https://leetcode-cn.com/u/johnkram/)              | 21   | 0:32:27  | 0:01:04                                                      | 0:05:00                                                      | 0:17:45                                                      | 0:32:27                                                      |
 
-[jun-28 195](https://leetcode-cn.com/contest/weekly-contest-195/ranking/)
+[jun-28 195](https://leetcode-cn.com/contest/weekly-contest-195/)
 
 端午调休，周日要上班，用虚拟竞赛。第3题老是超时...
 
