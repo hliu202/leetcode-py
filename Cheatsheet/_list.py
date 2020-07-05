@@ -11,8 +11,12 @@ for i in range(len(a)-1,-1,-1):
 a.sort(reverse=True)
 print (a)
 
-# join & split
-b = ['hello', 'world', '!']
-bb = '[' + ','.join(b) + ']'
-print(bb)
-print(bb[1:-1].split(','))
+# extend
+a = [1, 2]
+b = [3, 4]
+a.extend(b)
+print(a)
+
+# range
+a = list(range(3,-1,-1))
+print (a) # [3, 2, 1, 0]

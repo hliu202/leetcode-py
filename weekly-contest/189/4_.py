@@ -1,4 +1,3 @@
-
 # https://leetcode-cn.com/problems/maximum-number-of-darts-inside-of-a-circular-dartboard/solution/c-xiang-liang-suan-yuan-xin-jian-dan-yi-dong-by-sm/
 # 圆心
 
@@ -8,17 +7,22 @@
 import math
 from typing import List
 
+
 class Solution:
     def numPoints(self, points: List[List[int]], r: int) -> int:
         def dist2(p1: List[int], p2: List[int]) -> int:
             return (p1[0] - p2[0]) ** 2 + (p1[1] - p2[1]) ** 2
-        
+
         def getCircle(p1: List[int], p2: List[int]) -> List[float]:
             mid = [(p1[0] + p2[0]) / 2, (p1[1] + p2[1]) / 2]
-            angle = math.atan((p1[0] - p2[0]) / (p2[1] - p1[1])) if p2[1] - p1[1] else math.pi / 2
+            angle = (
+                math.atan((p1[0] - p2[0]) / (p2[1] - p1[1]))
+                if p2[1] - p1[1]
+                else math.pi / 2
+            )
             d = math.sqrt(r2 - dist2(p1, mid))
             return [mid[0] + d * math.cos(angle), mid[1] + d * math.sin(angle)]
-        
+
         n = len(points)
         ans = 1
         eps = 1e-6
@@ -35,4 +39,7 @@ class Solution:
                 ans = max(ans, count)
         return ans
 
-print(Solution().numPoints(points = [[-3,0],[3,0],[2,6],[5,4],[0,9],[7,8]], r = 5))
+print(
+    Solution().numPoints(points=[[-3, 0], [3, 0], [2, 6], [5, 4], [0, 9], [7, 8]], r=5)
+)
+

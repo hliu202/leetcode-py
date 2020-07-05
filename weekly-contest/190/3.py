@@ -8,8 +8,10 @@
 #         self.right = right
 from collections import defaultdict
 from util.tree_node import *
+
+
 class Solution:
-    def pseudoPalindromicPaths (self, root: TreeNode) -> int:
+    def pseudoPalindromicPaths(self, root: TreeNode) -> int:
         M = defaultdict(int)
         if root is None:
             return 0
@@ -19,7 +21,7 @@ class Solution:
             M[n.val] += 1
             nonlocal res
             if n.left == None and n.right == None:
-                #leaf
+                # leaf
                 count = 0
                 for v in M.values():
                     if v & 1 == 0:
@@ -30,7 +32,7 @@ class Solution:
                             # no
                             M[n.val] -= 1
                             return
-                res += 1 # found 1
+                res += 1  # found 1
                 M[n.val] -= 1
             else:
                 if n.left != None:
@@ -38,10 +40,15 @@ class Solution:
                 if n.right != None:
                     dfs(n.right)
                 M[n.val] -= 1
-        
+
         dfs(root)
         return res
 
-print(Solution().pseudoPalindromicPaths(createTree([2,3,1,3,1,None,1])))
-print(Solution().pseudoPalindromicPaths(createTree([2,1,1,1,3,None,None,None,None,None,1])))
+
+print(Solution().pseudoPalindromicPaths(createTree([2, 3, 1, 3, 1, None, 1])))
+print(
+    Solution().pseudoPalindromicPaths(
+        createTree([2, 1, 1, 1, 3, None, None, None, None, None, 1])
+    )
+)
 print(Solution().pseudoPalindromicPaths(createTree([9])))
