@@ -31,7 +31,12 @@ class Solution:
         return dp[ny - 1][nx - 1]
 
 
-print(Solution().uniquePathsWithObstacles([[0, 0, 0], [0, 1, 0], [0, 0, 0]]))
+print(Solution().uniquePathsWithObstacles([
+    [0, 0, 0],
+    [0, 1, 0],
+    [0, 0, 0]]))
 
-print(Solution().uniquePathsWithObstacles([[0, 0, 0, 0], [0, 1, 0, 0], [0, 0, 0, 0]]))
-
+print(Solution().uniquePathsWithObstacles([
+    [0, 0, 0, 0],
+    [0, 1, 0, 0],
+    [0, 0, 0, 0]]))
