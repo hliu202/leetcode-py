@@ -6,18 +6,18 @@ class Solution:
     def countSmaller(self, nums: List[int]) -> List[int]:
         if not nums:
             return []
-        self.right = [nums[-1]]
+        right = [nums[-1]]
         ans = []
 
         def insert(cur):
-            l, r = 0, len(self.right) - 1
+            l, r = 0, len(right) - 1
             while l < r:
                 mid = (l + r) // 2
-                if self.right[mid] < cur:
+                if right[mid] < cur:
                     l = mid + 1
                 else:
                     r = mid
-            self.right.insert(l, cur)
+            right.insert(l, cur)
             return l
 
         for i in range(len(nums) - 1, -1, -1):
@@ -28,3 +28,12 @@ class Solution:
 
 print(Solution().countSmaller([5, 2, 6, 1]))
 
+# class Solution:
+# def countSmaller(self, nums: List[int]) -> List[int]:
+#     sortns = []
+#     res = []
+#     for n in reversed(nums):
+#         idx = bisect.bisect_left(sortns, n)
+#         res.append(idx)
+#         sortns.insert(idx, n)
+#     return res[::-1]

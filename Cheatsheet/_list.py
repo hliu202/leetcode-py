@@ -5,6 +5,8 @@ print(a[::-1])
 # 倒转 index
 for i in range(len(a) - 1, -1, -1):
     print(i)
+for i in reversed(a): # reversed 函数返回一个反转的迭代器。可以是 tuple, string, list 或 range。
+    print(i)
 
 # 排序
 a.sort(reverse=True)
