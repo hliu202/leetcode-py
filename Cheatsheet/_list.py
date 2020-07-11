@@ -1,15 +1,14 @@
-
-a = [3,2,1,4,5]
+a = [3, 2, 1, 4, 5]
 
 # 倒转列表
-print (a[::-1])
+print(a[::-1])
 # 倒转 index
-for i in range(len(a)-1,-1,-1):
-    print (i)
+for i in range(len(a) - 1, -1, -1):
+    print(i)
 
 # 排序
 a.sort(reverse=True)
-print (a)
+print(a)
 
 # extend
 a = [1, 2]
@@ -18,5 +17,25 @@ a.extend(b)
 print(a)
 
 # range
-a = list(range(3,-1,-1))
-print (a) # [3, 2, 1, 0]
+a = list(range(3, -1, -1))
+print(a)  # [3, 2, 1, 0]
+
+# 插入 insert
+a = [0, 1, 2, 3]
+a.insert(4, 4)
+a.insert(0, -1)
+print(a)
+
+# bisect 二分法
+import bisect
+a = []
+idx = bisect.bisect_left(a, 3)
+a.insert(idx, 3)
+idx = bisect.bisect_left(a, 2)
+a.insert(idx, 2)
+idx = bisect.bisect_left(a, 4)
+a.insert(idx, 4)
+print(a)
+print(bisect.bisect_left(a, 3))
+print(bisect.bisect_right(a, 3))
+# a.insert(idx, 4)
