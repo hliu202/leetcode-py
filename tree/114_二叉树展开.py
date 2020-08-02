@@ -1,3 +1,7 @@
+# https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/
+
+# !结果仍然要是二叉树, 左子树为空
+
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, val=0, left=None, right=None):
