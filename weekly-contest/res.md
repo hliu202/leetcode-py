@@ -103,3 +103,14 @@
 | 2          | [JOHNKRAM](https://leetcode-cn.com/u/johnkram/) | 20   | 0:24:58  | 0:00:51                                                      | 0:05:21                                                      | 0:12:05                                                      | 0:19:58 1                                                    |
 | 3          | [lddlinan](https://leetcode-cn.com/u/lddlinan/) | 20   | 0:25:12  | 0:01:57                                                      | 0:04:27                                                      | 0:15:03                                                      | 0:25:12                                                      |
 
+[Aug2 200](https://leetcode-cn.com/contest/weekly-contest-200/)
+
+开始迟到了, 做了 3 道题也只能排 1k 开外了...
+
+| 排名        | 用户名                                              | 得分 | 完成时间 | [题目1 (3)](https://leetcode-cn.com/contest/weekly-contest-200/problems/count-good-triplets/) | [题目2 (4)](https://leetcode-cn.com/contest/weekly-contest-200/problems/find-the-winner-of-an-array-game/) | [题目3 (5)](https://leetcode-cn.com/contest/weekly-contest-200/problems/minimum-swaps-to-arrange-a-binary-grid/) | [题目4 (6)](https://leetcode-cn.com/contest/weekly-contest-200/problems/get-the-maximum-score/) |
+| ----------- | --------------------------------------------------- | ---- | -------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| 1033 / 5474 | liu-hao-b                                           | 12   | 1:18:34  | 0:28:34                                                      | 0:45:48 1                                                    | 1:13:34                                                      |                                                              |
+| 1           | [JOHNKRAM](https://leetcode-cn.com/u/johnkram/)     | 18   | 0:18:20  | 0:01:20                                                      | 0:05:13                                                      | 0:09:09                                                      | 0:13:20 1                                                    |
+| 2           | [laekov_prc](https://leetcode-cn.com/u/laekov_prc/) | 18   | 0:20:56  | 0:01:22                                                      | 0:06:28                                                      | 0:15:31                                                      | 0:20:56                                                      |
+| 3           | [sleepybag](https://leetcode-cn.com/u/sleepybag/)   | 18   | 0:22:24  | 0:02:27                                                      | 0:07:46                                                      | 0:15:48                                                      | 0:22:24                                                      |
+
