@@ -15,3 +15,12 @@ b = ['hello', 'world', '!']
 bb = '[' + ','.join(b) + ']'
 print(bb)  # str
 print(bb[1:-1].split(',')) # list
+
+# to list
+L = list('0123456789')
+print(L)
+
+# char
+print(ord('1')-ord('0'))
+print(ord('a'))
+print(chr(97)) # a
