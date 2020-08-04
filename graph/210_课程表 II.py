@@ -3,8 +3,8 @@
 # 图的拓扑排序
 import collections
 
-class Solution(object):
 
+class Solution(object):
     def findOrder(self, numCourses, prerequisites):
         """
         :type numCourses: int
@@ -12,7 +12,7 @@ class Solution(object):
         :rtype: List[int]
         """
         edges = collections.defaultdict(list)
-        visited = [0] * numCourses # 0: not, 1: visiting, 2: done
+        visited = [0] * numCourses  # 0: not, 1: visiting, 2: done
         stack = []
         valid = True
 
@@ -29,8 +29,9 @@ class Solution(object):
                 elif visited[t] == 1:
                     valid = False
                     return
-                
-                if not valid: return
+
+                if not valid:
+                    return
 
             visited[node] = 2
             stack.append(node)
@@ -39,9 +40,11 @@ class Solution(object):
             if valid and not visited[i]:
                 dfs(i)
                 if not valid:
-                    return [] # None or Empty?
-        
+                    return []  # None or Empty?
+
         return stack[::-1]
 
+
 # print(Solution().findOrder(4, [[1,0],[2,0],[3,1],[3,2]]))
-print(Solution().findOrder(2, [[0,1],[1,0]]))
+print(Solution().findOrder(2, [[0, 1], [1, 0]]))
+
