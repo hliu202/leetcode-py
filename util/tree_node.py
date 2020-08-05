@@ -44,7 +44,7 @@ def deserialize(data: str):
             deq.append(left)
         i += 1
 
-        if vals[i] != "null":
+        if i < n and vals[i] != "null": # 以防最后一个节点,没有右节点
             right = TreeNode(int(vals[i]))
             cur.right = right
             deq.append(right)
