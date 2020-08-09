@@ -21,7 +21,30 @@ def createNode(A, idxOfLevel, depth):
 
     return None
 
+def serialize(root: TreeNode):
+    """Encodes a tree to a single string.
+    
+    :type root: TreeNode
+    :rtype: str
+    """
+    if root is None:
+        return ""
 
+    deq = deque()
+    deq.append(root)
+
+    res = "["
+    while deq:  # BFS
+        cur = deq.popleft()
+        res += (str(cur.val) if cur is not None else "null") + ","
+        if cur is not None:
+            deq.append(cur.left)
+            deq.append(cur.right)
+    j = len(res) - 2  # ,
+    while j > 0 and not res[j].isdigit():
+        j -= 1
+    return res[0 : j + 1] + "]"
+    
 def deserialize(data: str):
     """Decodes your encoded data to tree.
     

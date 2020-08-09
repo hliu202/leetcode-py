@@ -24,3 +24,6 @@ print(L)
 print(ord('1')-ord('0'))
 print(ord('a'))
 print(chr(97)) # a
+
+# to int
+print(int("255"))
