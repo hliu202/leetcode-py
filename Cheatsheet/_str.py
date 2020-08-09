@@ -5,6 +5,7 @@ a = "hello"
 c1 = a[0].upper()
 c2 = c1.lower()
 print(c1, c2)
+print(ord('a')-ord('A'))
 
 b1 = a.title()
 b2 = a.lower()
