@@ -1,5 +1,17 @@
 a = [3, 2, 1, 4, 5]
 
+# copy
+b = a.copy()
+b.append(6)
+print(b)
+
+a = [3]
+print(a[1:]) # []
+
+# sublist
+print(a[0:2])
+print(a[1:2]) # [2] 到 index=2 为止(不包含)
+
 # 倒转列表
 print(a[::-1])
 # 倒转 index
@@ -16,6 +28,7 @@ print(a)
 a = [1, 2]
 b = [3, 4]
 a.extend(b)
+a += b # 1,2,3,4,3,4
 print(a)
 
 # range
