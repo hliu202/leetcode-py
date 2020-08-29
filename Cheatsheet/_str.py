@@ -28,3 +28,7 @@ print(chr(97)) # a
 
 # to int
 print(int("255"))
+
+# find
+s = "abcab"
+print(s.find("ab", 1)) # 3 (the index of ab, start=1)
