@@ -1,4 +1,6 @@
 
+# https://www.runoob.com/python/python-strings.html
+
 a = "hello"
 
 # 大小写
@@ -33,3 +35,7 @@ print(int("255"))
 s = "abcab"
 print(s.find("ab", 1)) # 3 (the index of ab, start=1)
 print(s.find("xdb")) # -1 not found
+
+# duplicate
+a = ''.join('.'*8)
+print(a)
