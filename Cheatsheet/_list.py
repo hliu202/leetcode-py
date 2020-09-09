@@ -1,6 +1,6 @@
 a = [3, 2, 1, 4, 5]
 
-# copy
+# copy 复制
 b = a.copy()
 b.append(6)
 print(b)
