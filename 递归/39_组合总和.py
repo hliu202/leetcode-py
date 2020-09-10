@@ -1,3 +1,6 @@
+# https://leetcode-cn.com/problems/combination-sum/
+
+# 回溯 减枝
 from util.common_imports import *
 
 class Solution:
