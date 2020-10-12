@@ -5,14 +5,16 @@
 # （3）不选择nums1[i-1],选择nums2[j-1]
 # （4）选择nums1[i-1]和nums2[j],同时选择前面的
 
+
 class Solution:
     def maxDotProduct(self, nums1: List[int], nums2: List[int]) -> int:
-        m,n = len(nums1),len(nums2)
+        m, n = len(nums1), len(nums2)
         INF = -100000000
-        dp = [[INF]*(n+1) for _ in range(m+1)]
-        for i in range(1,m+1):
-            for j in range(1,n+1):
-                dp[i][j] = nums1[i-1] * nums2[j-1]
-                dp[i][j] = max(dp[i][j], dp[i-1][j], dp[i][j-1], dp[i][j]+dp[i-1][j-1])
+        dp = [[INF] * (n + 1) for _ in range(m + 1)]
+        for i in range(1, m + 1):
+            for j in range(1, n + 1):
+                dp[i][j] = nums1[i - 1] * nums2[j - 1]
+                dp[i][j] = max(
+                    dp[i][j], dp[i - 1][j], dp[i][j - 1], dp[i][j] + dp[i - 1][j - 1]
+                )
         return dp[m][n]
-
