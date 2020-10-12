@@ -5,9 +5,11 @@
 #         self.next = next
 class Solution:
     def swapPairs(self, head: ListNode) -> ListNode:
-        if not head: return head
+        if not head:
+            return head
 
-        if not head.next: return head
+        if not head.next:
+            return head
 
         nhead = head.next
         head.next = self.swapPairs(head.next.next)
